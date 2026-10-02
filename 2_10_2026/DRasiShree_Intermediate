@@ -1,0 +1,30 @@
+D Rasi Shree
+Intermediate solution
+Wet Shark and Odd and Even
+
+code :
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    long long sum=0;
+    long long m=INT_MAX;
+    for(int i=0;i<n;i++){
+        long long value;
+        cin>> value;
+        if(value%2==1){
+            m=min(m,value);
+        }
+        sum+=value;
+    }
+    if(sum%2==1){
+        cout<< sum-m;
+    }
+    else{
+        cout<<sum;
+        
+    }
+}
