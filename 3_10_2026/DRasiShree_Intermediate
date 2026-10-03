@@ -1,0 +1,26 @@
+Intermediate Solution : The Time
+  
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string t;
+    cin>>t;
+    int hr=stoi(t.substr(0,2));
+    int m=stoi(t.substr(3,2));
+    int a;
+    cin>>a;
+    hr+=((a+m)/60);
+    m=((a+m)%60);
+    hr=hr%24;
+    string ans="";
+    if(hr<10){
+        ans+="0";
+    }
+    ans+=to_string(hr);
+    ans+=":";
+    if(m<10){
+        ans+="0";
+    }
+    ans+=to_string(m);
+    cout<<ans;
+}
