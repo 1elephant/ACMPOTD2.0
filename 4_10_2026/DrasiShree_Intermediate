@@ -1,0 +1,22 @@
+Intermediate Problem : Holidays
+
+code:
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int w=n/7;
+    int r=n%7;
+    int m=w*2;
+    if(r==6){
+        m+=1;
+    }
+    if(r>2){
+        r=2;
+    }
+    int maximum=(w*2)+r;
+    cout<<m<<" ";
+    cout<<maximum;
+}
