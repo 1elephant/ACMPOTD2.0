@@ -1,0 +1,17 @@
+Intermediate Code : Lucky Year
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    string str=to_string(n);
+    int len=str.length();
+    int p=1;
+    for(int i=1;i<len;i++){
+        p*=10;
+    }
+    int q=n/p;
+    int next=(q+1)*p;
+    cout<<next-n;
+}
