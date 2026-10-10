@@ -1,0 +1,30 @@
+Intermediate Code:
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string a,t;
+    cin>>a>>t;
+    int x=abs(a[0]-t[0]);
+    int y=abs(a[1]-t[1]);
+    cout<<max(x,y)<<endl;
+    while(a!=t){
+        if(a[0]<t[0]){
+            cout<<"R";
+            a[0]++;
+        }
+        if(a[0]>t[0]){
+            cout<<"L";
+            a[0]--;
+        }
+        if(a[1]>t[1]){
+            cout<<"D";
+            a[1]--;
+        }
+        if(a[1]<t[1]){
+            cout<<"U";
+            a[1]++;
+        }
+        cout<<endl;
+    }
+}
