@@ -1,0 +1,28 @@
+Intermediate Code : 
+Numbers
+#include<bits/stdc++.h>
+using namespace std;
+int sum(int n,int b){
+    int r=0;
+    while(n>0){
+        r+=(n%b);
+        n=n/b;
+    }
+    return r;
+}
+int findgcd(int s,int t){
+    if(s%t==0) {
+        return t;
+    }
+    return findgcd(t,s%t);
+}
+int main(){
+    int a;
+    cin>>a;
+    int s=0;
+    for(int i=2;i<a;i++){
+        s+=sum(a,i);
+    }
+    int g=findgcd(s,a-2);
+    cout<<s/g<<"/"<<(a-2)/g;
+}
