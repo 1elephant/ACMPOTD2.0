@@ -1,0 +1,27 @@
+Split Problem code : 
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    vector<int>x(n);
+    vector<int>d(n);
+    for(int i=0;i<n;i++){
+        cin>>x[i];
+        cin>>d[i];
+    }
+    for(int i=0;i<n;i++){
+        int pos=x[i];
+        int spit=x[i]+d[i];
+        for(int j=0;j<n;j++){
+            if(i==j){
+                continue;
+            }
+            if(spit==x[j] && (x[j]+d[j])==pos){
+                cout<<"YES";
+                return 0;
+            }
+        }
+    }
+    cout<<"NO";
+}
